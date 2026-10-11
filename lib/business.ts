@@ -44,19 +44,9 @@ export const BUSINESS_CONFIG = {
   // 3 תמונות נגררים לגלריה
   gallery: [
     {
-      id: "trailer-1",
-      title: "נגרר פתוח עם דפנות רשת",
-      src: "/images/trailer-hero.jpg",
-    },
-    {
-      id: "trailer-2",
-      title: "נגרר עם רמפה אחורית",
-      src: "/images/trailer-ramp.jpg",
-    },
-    {
-      id: "trailer-3",
-      title: "נגרר עם כיסוי ברזנט",
-      src: "/images/trailer-cover.jpg",
+      id: "nigrar",
+      title: "נגרר להשכרה באשדוד",
+      src: "/images/nigrar.jpg",
     },
   ],
 

@@ -4,7 +4,6 @@ import React from 'react';
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { PricingSection } from '@/components/PricingSection';
-import { TrailerGallery } from '@/components/TrailerGallery';
 import { FAQSection } from '@/components/FAQSection';
 import { MapNavigationSection } from '@/components/MapNavigationSection';
 import { Footer } from '@/components/Footer';
@@ -20,9 +19,6 @@ export default function Home() {
 
       {/* מחירון ברקע שחור */}
       <PricingSection />
-
-      {/* גלריית 3 נגררים בלולאה אינסופית רציפה וחלקה */}
-      <TrailerGallery />
 
       {/* שאלות נפוצות */}
       <FAQSection />
