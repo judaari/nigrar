@@ -11,13 +11,13 @@ export function Header() {
       <div className="max-w-4xl mx-auto px-4 py-2.5 flex flex-col items-center">
         {/* שורה ראשונה: אזור שמור לקובץ הלוגו המקורי בלבד - ללא אימוג'י וללא טקסט חלופי */}
         <div className="flex items-center justify-center py-1">
-          <div className="relative w-40 sm:w-48 h-14 sm:h-16 flex items-center justify-center">
+          <div className="relative w-72 sm:w-[32rem] h-28 sm:h-36 flex items-center justify-center">
             {logoAvailable ? (
               <Image
                 src="/images/logo.svg"
                 alt="לוגו"
-                width={192}
-                height={64}
+                width={576}
+                height={192}
                 priority
                 className="max-h-full max-w-full object-contain"
                 onError={() => setLogoAvailable(false)}

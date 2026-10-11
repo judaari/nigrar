@@ -14,7 +14,7 @@ export function TrailerGallery() {
   const allItems = [...singleSet, ...singleSet];
 
   return (
-    <section id="gallery" className="py-8 sm:py-12 bg-black text-white relative border-b border-zinc-900 overflow-hidden">
+    <section id="gallery" className="py-8 sm:py-12 bg-black text-white relative border-b border-zinc-900 overflow-hidden scroll-mt-44 sm:scroll-mt-52">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-5 text-center">
         {/* כותרת גלריה נקייה ללא באנר תיאור מיותר */}
         <motion.div

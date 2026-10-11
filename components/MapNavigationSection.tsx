@@ -10,7 +10,7 @@ export function MapNavigationSection() {
   const { address, serviceArea, wazeUrl, googleMapsUrl, embedMapUrl } = BUSINESS_CONFIG.location;
 
   return (
-    <section id="location" className="py-8 sm:py-12 bg-black text-white relative border-b border-zinc-900">
+    <section id="location" className="py-8 sm:py-12 bg-black text-white relative border-b border-zinc-900 scroll-mt-44 sm:scroll-mt-52">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* כותרת מקטע ניווט ומפה */}
         <motion.div

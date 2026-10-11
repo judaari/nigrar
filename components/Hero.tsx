@@ -29,14 +29,7 @@ export function Hero() {
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-6"
         >
-          <motion.h1
-            initial={shouldReduceMotion ? {} : { opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl sm:text-6xl md:text-7xl font-black text-white tracking-tight leading-none"
-          >
-            {BUSINESS_CONFIG.name}
-          </motion.h1>
+
 
           <motion.p
             initial={shouldReduceMotion ? {} : { opacity: 0, y: 8 }}
@@ -63,20 +56,20 @@ export function Hero() {
           initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.35 }}
-          className="max-w-xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-3.5 scroll-mt-28"
+          className="max-w-xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-3.5 scroll-mt-44 sm:scroll-mt-52"
         >
           {/* כפתור 1: שיחה מהירה - חיוג ישיר ללא הצגת מספר הטלפון על המסך */}
           <motion.a
             href={BUSINESS_CONFIG.contact.telHref}
             whileHover={shouldReduceMotion ? {} : { scale: 1.02, y: -2 }}
             whileTap={shouldReduceMotion ? {} : { scale: 0.97 }}
-            className="flex items-center justify-center gap-3 bg-amber-600 hover:bg-amber-500 text-white font-black text-base sm:text-lg py-4 px-6 rounded-2xl shadow-xl transition-colors text-center"
+            className="flex items-center justify-center gap-3 bg-[#FEE101] hover:bg-[#e6cc00] text-[#000000] font-black text-base sm:text-lg py-4 px-6 rounded-2xl shadow-xl transition-colors text-center"
             aria-label="התקשרו עכשיו לחיוג ישיר"
           >
-            <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center">
-              <Phone className="w-4 h-4 text-white fill-white" />
+            <div className="w-8 h-8 rounded-xl bg-black/10 flex items-center justify-center">
+              <Phone className="w-4 h-4 text-[#000000] fill-[#000000]" />
             </div>
-            <span>התקשרו עכשיו</span>
+                        <span className="text-[#000000]">התקשרו עכשיו</span>
           </motion.a>
 
           {/* כפתור 2: WhatsApp - פתיחת שיחה ללא הצגת מספר על המסך */}

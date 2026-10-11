@@ -14,7 +14,7 @@ export function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-8 sm:py-12 bg-black text-white relative border-b border-zinc-900">
+    <section id="faq" className="py-8 sm:py-12 bg-black text-white relative border-b border-zinc-900 scroll-mt-44 sm:scroll-mt-52">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         {/* כותרת מינימלית ומדויקת */}
         <motion.div

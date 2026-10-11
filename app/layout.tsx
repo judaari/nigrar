@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="he" dir="rtl" className={`scroll-smooth bg-black ${heebo.variable}`}>
+    <html lang="he" dir="rtl" className={`scroll-smooth bg-black ${heebo.variable}`} suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#000000" />
       </head>

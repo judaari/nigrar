@@ -7,6 +7,7 @@ import { PricingSection } from '@/components/PricingSection';
 import { TrailerGallery } from '@/components/TrailerGallery';
 import { FAQSection } from '@/components/FAQSection';
 import { MapNavigationSection } from '@/components/MapNavigationSection';
+import { IslandProgressionEngine } from '@/components/IslandProgressionEngine';
 import { Footer } from '@/components/Footer';
 
 export default function Home() {
@@ -29,6 +30,9 @@ export default function Home() {
 
       {/* מקטע מפה וניווט בתחתית האתר: מפה מוטמעת + כפתור Waze יחיד + כפתור Google Maps יחיד */}
       <MapNavigationSection />
+
+      {/* מנוע התקדמות איים (Island Progression Engine) */}
+      <IslandProgressionEngine />
 
       {/* פוטר נקי */}
       <Footer />
