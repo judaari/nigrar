@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import { Heebo } from 'next/font/google';
 import './globals.css'; // Global styles
 import { AccessibilityWidget } from '@/components/AccessibilityWidget';
+import { Analytics } from '@vercel/analytics/next';
 
 const heebo = Heebo({
   subsets: ['hebrew', 'latin'],
@@ -35,6 +36,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       <body className="bg-black text-white font-sans antialiased selection:bg-amber-400 selection:text-black font-semibold" suppressHydrationWarning>
         {children}
         <AccessibilityWidget />
+        <Analytics />
       </body>
     </html>
   );
