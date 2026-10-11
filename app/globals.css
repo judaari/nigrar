@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heebo: 'Heebo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family: var(--font-heebo), sans-serif;
+    color: #ffffff;
+  }
+
+  body {
+    font-family: var(--font-heebo), sans-serif !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    background-color: #000000;
+  }
+
+  /* כל הטקסטים והכותרות בצבע לבן אחיד ובמשקלים עבים */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heebo), sans-serif !important;
+    color: #ffffff !important;
+    font-weight: 900 !important;
+  }
+
+  p, span, a, button, li, label {
+    font-family: var(--font-heebo), sans-serif !important;
+    color: #ffffff;
+  }
+
+  ::selection {
+    background-color: #fbbf24;
+    color: #020617;
+  }
+}
+
+/* אנימציית גלריה רציפה בלולאה אינסופית אמיתית */
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-scroll 26s linear infinite;
+}
+
+/* מניעת פסי גלילה בסרגל הניווט */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* התאמות נגישות */
+html.text-scale-sm {
+  font-size: 90%;
+}
+
+html.text-scale-lg {
+  font-size: 115%;
+}
+
+html.text-scale-xl {
+  font-size: 130%;
+}
+
+html.high-contrast {
+  filter: contrast(135%);
+}
+
+html.high-contrast body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html.highlight-links a {
+  text-decoration: underline !important;
+  text-decoration-color: #f59e0b !important;
+  text-underline-offset: 4px !important;
+  font-weight: 800 !important;
+}
+
+html.highlight-focus *:focus,
+html.highlight-focus *:focus-visible {
+  outline: 3px solid #f59e0b !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 5px rgba(245, 158, 11, 0.4) !important;
+}
+
+html.reduce-motion *,
+html.reduce-motion *::before,
+html.reduce-motion *::after,
+html.reduce-motion .marquee-track {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
