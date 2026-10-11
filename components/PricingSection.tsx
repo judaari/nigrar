@@ -24,9 +24,7 @@ export function PricingSection() {
           <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
             מחירון השכרת נגרר
           </h2>
-          <p className="mt-1.5 text-white font-bold text-sm sm:text-base max-w-lg mx-auto">
-            מחירים קבועים והוגנים ללא אותיות קטנות או עמלות נסתרות
-          </p>
+
         </motion.div>
 
         {/* 2 כרטיסי המחירון */}

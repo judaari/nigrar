@@ -9,7 +9,7 @@ export function Hero() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="relative overflow-hidden pt-6 pb-8 md:pt-10 md:pb-12 bg-black text-white border-b border-zinc-900">
+    <section id="hero" className="relative overflow-hidden pt-6 pb-8 md:pt-10 md:pb-12 bg-black text-white border-b border-zinc-900 scroll-mt-44 sm:scroll-mt-52">
       {/* אלמנטים גרפיים מעודנים ברקע שחור */}
       <div className="absolute inset-0 pointer-events-none opacity-10 overflow-hidden">
         <div
@@ -63,13 +63,21 @@ export function Hero() {
             href={BUSINESS_CONFIG.contact.telHref}
             whileHover={shouldReduceMotion ? {} : { scale: 1.02, y: -2 }}
             whileTap={shouldReduceMotion ? {} : { scale: 0.97 }}
-            className="flex items-center justify-center gap-3 bg-[#FEE101] hover:bg-[#e6cc00] text-[#000000] font-black text-base sm:text-lg py-4 px-6 rounded-2xl shadow-xl transition-colors text-center"
+            className="relative overflow-hidden flex items-center justify-center gap-3 bg-[#FEE101] hover:bg-[#e6cc00] text-[#000000] font-black text-base sm:text-lg py-4 px-6 rounded-2xl shadow-xl transition-colors text-center"
             aria-label="התקשרו עכשיו לחיוג ישיר"
           >
-            <div className="w-8 h-8 rounded-xl bg-black/10 flex items-center justify-center">
+            {!shouldReduceMotion && (
+              <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-2xl">
+                <div 
+                  className="absolute inset-y-0 w-[80%] opacity-45 bg-gradient-to-r from-transparent via-orange-500 to-transparent"
+                  style={{ animation: 'btn-wave 3s linear infinite' }}
+                />
+              </div>
+            )}
+            <div className="w-8 h-8 rounded-xl bg-black/10 flex items-center justify-center relative z-10">
               <Phone className="w-4 h-4 text-[#000000] fill-[#000000]" />
             </div>
-                        <span className="text-[#000000]">התקשרו עכשיו</span>
+            <span className="text-[#000000] relative z-10">התקשרו עכשיו</span>
           </motion.a>
 
           {/* כפתור 2: WhatsApp - פתיחת שיחה ללא הצגת מספר על המסך */}
@@ -79,13 +87,21 @@ export function Hero() {
             rel="noopener noreferrer"
             whileHover={shouldReduceMotion ? {} : { scale: 1.02, y: -2 }}
             whileTap={shouldReduceMotion ? {} : { scale: 0.97 }}
-            className="flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-base sm:text-lg py-4 px-6 rounded-2xl shadow-xl transition-colors text-center"
+            className="relative overflow-hidden flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-base sm:text-lg py-4 px-6 rounded-2xl shadow-xl transition-colors text-center"
             aria-label="דברו איתנו ב-WhatsApp"
           >
-            <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center">
+            {!shouldReduceMotion && (
+              <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-2xl">
+                <div 
+                  className="absolute inset-y-0 w-[80%] opacity-40 bg-gradient-to-r from-transparent via-white to-transparent"
+                  style={{ animation: 'btn-wave 3s linear infinite' }}
+                />
+              </div>
+            )}
+            <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center relative z-10">
               <MessageCircle className="w-4 h-4 text-white fill-white" />
             </div>
-            <span>דברו איתנו ב-WhatsApp</span>
+            <span className="relative z-10">דברו איתנו ב-WhatsApp</span>
           </motion.a>
         </motion.div>
       </div>

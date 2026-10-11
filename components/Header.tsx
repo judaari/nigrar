@@ -40,7 +40,7 @@ export function Header() {
           >
             <div className="flex items-center justify-center gap-5 sm:gap-8 min-w-max mx-auto px-2">
               <a
-                href="#contact-buttons"
+                href="#hero"
                 className="text-white hover:text-amber-400 font-extrabold text-sm sm:text-base tracking-wide transition-colors whitespace-nowrap focus:outline-none focus:ring-1 focus:ring-amber-400 rounded px-1.5 py-0.5"
               >
                 יצירת קשר

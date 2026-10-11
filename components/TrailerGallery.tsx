@@ -26,9 +26,7 @@ export function TrailerGallery() {
           <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
             גלריית נגררים
           </h2>
-          <p className="mt-1.5 text-white font-bold text-xs sm:text-sm max-w-md mx-auto">
-            תמונות המחשה של צי הנגררים להשכרה
-          </p>
+
         </motion.div>
       </div>
 
